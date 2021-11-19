@@ -1,19 +1,19 @@
+import React from "react";
 import "./App.css";
-import Checkout from './Components/Checkout';
-import Products from './Components/Products';
-import Cart from './Components/Cart';
-import productData from './data/productData'
-
+import Checkout from './components/Checkout.js';
+import Products from './components/Products.js';
+import Cart from './components/Cart.js';
+import productData from './data/productData.js'
 
 
 class App extends React.Component {
   constructor(){
-    super()
+    super();
     this.state = {
       items: []
     }
   }
-  
+
   addToCart = (item) =>{
     const { items } = this.state
     this.setState({
