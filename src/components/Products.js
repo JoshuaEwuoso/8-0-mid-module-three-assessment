@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from './Product';
+import "../App.css";
 
 
 const Products = ({products, addToCart}) =>{
@@ -7,10 +8,10 @@ const Products = ({products, addToCart}) =>{
         return <Product key={item.id} product={item} addToCart={addToCart} />
     })
     return (
-        <main className='Products'>
+        <section className='products'>
             <h2>My Garage Sale</h2>
             {productComponent}
-        </main>
+        </section>
     )
 }
 

@@ -37,7 +37,7 @@ class Checkout extends Component {
 render() {
     const { FirstName, LastName, Email, CreditCard, ZipCode } = this.state
     return (
-        <form onSubmit={this.handleSubmit}>
+        <form id='checkout'onSubmit={this.handleSubmit}>
             <h2>Checkout</h2>
             <label htmlFor='FirstName'>First Name</label>
             <input
@@ -74,7 +74,7 @@ render() {
                 value={ZipCode}
                 name='ZipCode'
                 id='ZipCode'/>
-            <button>Buy Now</button>
+            <button type="submit">Buy Now</button>
         </form>
         )
     }
