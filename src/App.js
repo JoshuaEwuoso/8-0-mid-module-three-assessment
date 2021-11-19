@@ -1,16 +1,53 @@
 import "./App.css";
+import productData from "./data/productData";
 
 const App = () => {
   return (
     <>
-    <h1>My Garage Sale</h1>;
+    <h1>My Garage Sale</h1>
     <section className="products">
-      <h3>Baseball Glove</h3>
-      <h3>Vintage VCR</h3>
-      <h3>Rusty Bicycle</h3>
-      <h3>Mismatched Socks</h3>
-      <h3>Old Newspapers</h3>
-      <h3>Comfy Armchair</h3>
+      <h3>{productData[0].name}</h3>
+      <p>Price: ${productData[0].price}</p>
+      <img 
+      src="https://via.placeholder.com/200/0000FF/FFFFFF?text=Baseball+Glove"
+      />
+      <button>Add To Cart</button>
+      <p>{productData[0].description}</p>
+      <h3>{productData[1].name}</h3>
+      <p>Price: $20.00</p>
+      <img
+      src="https://via.placeholder.com/200/FF0000/FFFFFF?text=Vintage+VCR"
+      />
+      <button>Add To Cart</button>
+      <p>{productData[1].description}</p>
+      <h3>{productData[2].name}</h3>
+      <p>Price: ${productData[2].price}</p>
+      <img 
+      src="https://via.placeholder.com/200/000000/FFFFFF?text=Rusty+Bicycle"
+      />
+      <button>Add To Cart</button>
+      <p>{productData[2].description}</p>
+      <h3>{productData[3].name}</h3>
+      <p>Price: ${productData[3].price}</p>
+      <img 
+      src="https://via.placeholder.com/200/FFFF00/000000?text=Mismatched+Socks"
+      />
+      <button>Add To Cart</button>
+      <p>{productData[3].description}</p>
+      <h3>{productData[4].name}</h3>
+      <p>Price: $7.50</p>
+      <img 
+      src="https://via.placeholder.com/200/CCCCCC/000000?text=Old+Newspapers"
+      />
+      <button>Add To Cart</button>
+      <p>{productData[4].description}</p>
+      <h3>{productData[5].name}</h3>
+      <p>Price: $47.00</p>
+      <img 
+      src="https://via.placeholder.com/200/0000FF/FFFFFF?text=Comfy+Armchair"
+      />
+      <button>Add To Cart</button>
+      <p>{productData[5].description}</p>
     </section>
     <section className="cart">
       <h3>Cart:</h3>
