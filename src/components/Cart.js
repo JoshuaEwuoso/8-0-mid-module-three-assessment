@@ -2,9 +2,9 @@ import React from 'react';
 import formatPrice from '../helpers/formatPrice';
 
 const Cart = ({ items, subTotal, tax, total }) => {
-    const listItems = items.map(item=>{
+    const listItems = items.map(item => {
         return (
-            <li key={item.id}>{item.name}: ${item.price}</li>
+            <li key={item.id}>{item.name}: {formatPrice(item.price)}</li>
         )
     })
     return (

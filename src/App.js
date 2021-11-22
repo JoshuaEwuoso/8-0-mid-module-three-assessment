@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import Checkout from './components/Checkout.js';
-import Products from './components/Products.js';
-import Cart from './components/Cart.js';
-import productData from './data/productData.js'
+import Checkout from './components/Checkout';
+import Products from './components/Products';
+import Cart from './components/Cart';
+import productData from './data/productData';
 
 
 class App extends React.Component {
@@ -14,26 +14,25 @@ class App extends React.Component {
     }
   }
 
-  addToCart = (item) =>{
+  addToCart = (item) => {
     const { items } = this.state
     this.setState({
       items: [...items, item]
     })
   }
 
-
-  render(){
-  const { items } = this.state
-  const subTotal = items.reduce((sum, item)=> sum + item.price, 0)
-  const tax = (subTotal * 0.05)
-  const total = subTotal + tax
-    return (
-      <div>
-        <Products products={productData} addToCart={this.addToCart}/>
-        <Cart items={items} subTotal={subTotal} tax={tax} total={total}/> 
-        <Checkout total={total}/> 
-      </div>
-    )
+  render() {
+    const { items } = this.state
+    const subTotal = items.reduce((sum, item) => sum + item.price, 0)
+    const tax = (subTotal * 0.05)
+    const total = subTotal + tax
+      return (
+        <div>
+          <Products products={productData} addToCart={this.addToCart}/>
+          <Cart items={items} subTotal={subTotal} tax={tax} total={total}/> 
+          <Checkout total={total}/> 
+        </div>
+      )
   }
 };
 

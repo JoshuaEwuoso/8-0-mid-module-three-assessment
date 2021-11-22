@@ -3,9 +3,9 @@ import Product from './Product';
 import "../App.css";
 
 
-const Products = ({products, addToCart}) =>{
-    const productComponent = products.map(item=>{
-        return <Product key={item.id} product={item} addToCart={addToCart} />
+const Products = ({products, addToCart}) => {
+    const productComponent = products.map(item => {
+        return <Product key={item.id} product={item} addToCart={addToCart}/>
     })
     return (
         <section className='products'>

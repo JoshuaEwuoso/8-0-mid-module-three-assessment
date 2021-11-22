@@ -9,20 +9,21 @@ class Checkout extends Component {
             LastName: '',
             Email: '',
             CreditCard: '',
-            ZipCode: ''
+            ZipCode: '',
+            total: '',
         };
     }
 
-    handleSubmit = (event) =>{
+    handleSubmit = (event) => {
         event.preventDefault()
         const { FirstName, LastName, Email, CreditCard, ZipCode } = this.state
         if(!FirstName || !LastName || !Email || !CreditCard || !ZipCode){
             alert(' Input is not valid')
-        }else if(CreditCard.length < 16){
+        } else if(CreditCard.length < 16){
             alert('Credit card number is not valid')
-        }else if(ZipCode.length < 5){
+        } else if(ZipCode.length < 5){
             alert('Zip code is not valid')
-        }else{
+        } else {
             alert(`Purchase complete. You will be charged ${formatPrice(this.props.total)}`)
         };
     }

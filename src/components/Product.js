@@ -3,11 +3,11 @@ import formatPrice from '../helpers/formatPrice'
 
 const Product = ({product, addToCart}) =>{
     const {name, price, img, description} = product
-    return(
+    return (
         <div>
             <h3>{name}</h3>
             <p>Price: {formatPrice(price)}</p>
-            <button onClick={() => addToCart(product)}>Add To Cart</button>
+            <button type="submit" onClick={() => addToCart(product)}>Add To Cart</button>
             <br/>
             <img src={img} alt="item"></img>
             <p>{description}</p>
